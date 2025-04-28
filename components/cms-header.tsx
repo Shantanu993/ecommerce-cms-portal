@@ -24,10 +24,6 @@ export function CMSHeader({ toggleSidebar }: CMSHeaderProps) {
   return (
     <header className="border-b bg-background p-4 flex items-center justify-between">
       <div className="flex items-center gap-4">
-        <Button variant="outline" size="icon" onClick={toggleSidebar}>
-          <Menu className="h-5 w-5" />
-          <span className="sr-only">Toggle sidebar</span>
-        </Button>
         <div className="relative w-full max-w-sm">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input

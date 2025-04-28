@@ -29,10 +29,6 @@ const sidebarItems = [
   },
 ]
 
-interface CMSSidebarProps {
-  isOpen: boolean
-  setIsOpen: (isOpen: boolean) => void
-}
 
 export function CMSSidebar({ isOpen, setIsOpen }: CMSSidebarProps) {
   const pathname = usePathname()
@@ -47,9 +43,6 @@ export function CMSSidebar({ isOpen, setIsOpen }: CMSSidebarProps) {
       >
         <div className="p-6 flex justify-between items-center">
           <h1 className="text-xl font-bold">E-commerce CMS</h1>
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-            <X className="h-4 w-4" />
-          </Button>
         </div>
         <nav className="space-y-1 px-3">
           {sidebarItems.map((item) => (
